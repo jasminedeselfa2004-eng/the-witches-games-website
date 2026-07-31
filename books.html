@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Witches Games - Books</title>
+<!-- Styles -->
+<link href="styles.css" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<style>.book-price{display:none;}</style></head>
+<body>
+<!-- 🌍 TRANSLATE WIDGET -->
+<div id="google_translate_element"></div>
+<!-- ================= NAVIGATION ================= -->
+<header class="witchy-header">
+    <div class="ornament top"></div>
+
+    <nav class="witchy-nav">
+
+        <div class="nav-group left">
+            <a href="twg.html">
+                <span class="nav-icon">☼</span>
+                <span>HOME</span>
+            </a>
+
+            <a href="books.html">
+                <span class="nav-icon">♧</span>
+                <span>BOOKS</span>
+            </a>
+
+            <a href="music.html">
+                <span class="nav-icon">☾</span>
+                <span>MUSIC</span>
+            </a>
+        </div>
+
+        <div class="witches-logo">
+            <span class="moon">☾</span>
+            <img src="img/newlogo.png" alt="The Witches Games">
+            <span class="star">✦</span>
+        </div>
+
+        <div class="nav-group right">
+            <a href="information.html">
+                <span class="nav-icon">♢</span>
+                <span>INFORMATION</span>
+            </a>
+
+            <a href="dashboard.html">
+                <span class="nav-icon">✧</span>
+                <span>DASHBOARD</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="ornament bottom"></div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+  
+<!-- 🌑 Library -->
+<div class="library-container">
+<header class="library-header">
+<img alt="Books collection" class="library-hero-image" src="img/books.jpg"/>
+</header>
+
+
+<!-- Controls: Search and Filtering -->
+<div class="library-controls">
+<input id="searchInput" onkeyup="filterBooks()" placeholder="Search by title or author..." type="text"/>
+<select id="genreFilter" onchange="filterBooks()">
+<option value="all">All Genres</option>
+<option value="Fantasy">Fantasy</option>
+<option value="Mystery / Thriller">Mystery / Thriller</option>
+<option value="Dystopian">Dystopian</option>
+<option value="Dark Romance">Dark Romance</option>
+<option value="Romance">Romance</option>
+<option value="Classique">Classique</option>
+<option value="Poetry">Poetry</option>
+<option value="Family / Friendly">Family / Friendly</option>
+<option value="Self-help">Self-help</option>
+</select>
+<select id="statusFilter" onchange="filterBooks()">
+<option value="all">All Statuses</option>
+<option value="Unread">Unread</option>
+<option value="Read">Read</option>
+<option value="Currently reading">Currently Reading</option>
+</select>
+</div>
+<!-- Book Grid -->
+<div class="book-grid" id="bookGrid">
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">RY-01</span>
+<h3 class="book-title">Fourth Wing</h3>
+<p class="book-author">by Rebecca Yarros</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">VY-02</span>
+<h3 class="book-title">War Storm</h3>
+<p class="book-author">by Victoria Aveyard</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">VR-03</span>
+<h3 class="book-title">The Fates Divine</h3>
+<p class="book-author">by Veronica Roth</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">VR-04</span>
+<h3 class="book-title">Crave the Mark</h3>
+<p class="book-author">by Veronica Roth</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">SG-05</span>
+<h3 class="book-title">Finale</h3>
+<p class="book-author">by Stephanie Garber</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">HB-06</span>
+<h3 class="book-title">Wicked King</h3>
+<p class="book-author">by Holly black</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">HB-07</span>
+<h3 class="book-title">Cruel Prince</h3>
+<p class="book-author">by Holly black</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">FS-08</span>
+<h3 class="book-title">The falcon's eyes</h3>
+<p class="book-author">by Francesca Stanfill</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">JL-09</span>
+<h3 class="book-title">The inheritance Games</h3>
+<p class="book-author">by J.L Barnes</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">MW-10</span>
+<h3 class="book-title">The thief</h3>
+<p class="book-author">by Megan Whallen Turner</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">SJ-11</span>
+<h3 class="book-title">ACOTAR</h3>
+<p class="book-author">by Sara J. Maas</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Read">
+<span class="book-id">VY-12</span>
+<h3 class="book-title">Red Queen</h3>
+<p class="book-author">by Victoria Aveyard</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">LC-13</span>
+<h3 class="book-title">The Vanished Queen</h3>
+<p class="book-author">by Lisbeth Campbell</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">SC-14</span>
+<h3 class="book-title">When the stars come out</h3>
+<p class="book-author">by Scarlett St. Clair</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-15</span>
+<h3 class="book-title">A Good Girl's guide to murder</h3>
+<p class="book-author">by HollY Jackson</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-16</span>
+<h3 class="book-title">Good Girl bad Blood</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ--17</span>
+<h3 class="book-title">As Good as Dead</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Read">
+<span class="book-id">TM-18</span>
+<h3 class="book-title">Shatter me</h3>
+<p class="book-author">by Tahereh Mafi</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-19</span>
+<h3 class="book-title">Five Survive</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-20</span>
+<h3 class="book-title">Kill Joy</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Family / Friendly" data-status="Read">
+<span class="book-id">TB-21</span>
+<h3 class="book-title">Legends and Lattes</h3>
+<p class="book-author">by Travis Baldree</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Family / Friendly</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Read">
+<span class="book-id">AN--22</span>
+<h3 class="book-title">Lights out</h3>
+<p class="book-author">by Allen Navessa</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Read">
+<span class="book-id">HD-23</span>
+<h3 class="book-title">Haunting Adeline</h3>
+<p class="book-author">by H.D Carlton</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Read">
+<span class="book-id">HD-24</span>
+<h3 class="book-title">Where's Molly?</h3>
+<p class="book-author">by H.D Carlton</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-25</span>
+<h3 class="book-title">Not Quite Dead Yet</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Read">
+<span class="book-id">HD-26</span>
+<h3 class="book-title">Hunting Adeline</h3>
+<p class="book-author">by H.D Carlton</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">LJ-27</span>
+<h3 class="book-title">Then she was gone</h3>
+<p class="book-author">by Lisa Jewell</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">LS-28</span>
+<h3 class="book-title">Ember Queen</h3>
+<p class="book-author">by Laura Sebastian</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Currently reading">
+<span class="book-id">AH-29</span>
+<h3 class="book-title">King of wrath</h3>
+<p class="book-author">by Ana Huang</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status reading">Currently Reading</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">AJ-30</span>
+<h3 class="book-title">Brain thief</h3>
+<p class="book-author">by Alexander Jablokov</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Read">
+<span class="book-id">TM-31</span>
+<h3 class="book-title">Find me</h3>
+<p class="book-author">by Tahereh Mafi</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">SU-32</span>
+<h3 class="book-title">Alchemised</h3>
+<p class="book-author">by Senliyu</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">BM-33</span>
+<h3 class="book-title">Queen of thieves</h3>
+<p class="book-author">by Beezy Marsh</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Read">
+<span class="book-id">R-34</span>
+<h3 class="book-title">An enchantment of ravens</h3>
+<p class="book-author">by Rogerson</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">EL-35</span>
+<h3 class="book-title">We were liars</h3>
+<p class="book-author">by E.Lockhart</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Read">
+<span class="book-id">AH-36</span>
+<h3 class="book-title">Twisted love</h3>
+<p class="book-author">by Ana Huang</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Read">
+<span class="book-id">CH-37</span>
+<h3 class="book-title">November 9</h3>
+<p class="book-author">by Colleen Hoover</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Read">
+<span class="book-id">MM-38</span>
+<h3 class="book-title">The Song of Achilles</h3>
+<p class="book-author">by Madeline Miller</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Read">
+<span class="book-id">KG-39</span>
+<h3 class="book-title">Girl in pieces</h3>
+<p class="book-author">by Kathleen Glasglow</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Read">
+<span class="book-id">CH-40</span>
+<h3 class="book-title">Ugly love</h3>
+<p class="book-author">by Colleen Hoover</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">EB-41</span>
+<h3 class="book-title">Wuthering Heights</h3>
+<p class="book-author">by Emily Brontê</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Read">
+<span class="book-id">WS-42</span>
+<h3 class="book-title">Macbeth</h3>
+<p class="book-author">by William Shakespeare</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Read">
+<span class="book-id">WS-43</span>
+<h3 class="book-title">Hamlet</h3>
+<p class="book-author">by William Shakespeare</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">AA-44</span>
+<h3 class="book-title">The push</h3>
+<p class="book-author">by Ashley Audrain</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">HL-45</span>
+<h3 class="book-title">To kill a mockingbird</h3>
+<p class="book-author">by Harper Lee</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">KC-46</span>
+<h3 class="book-title">The awakening of Kate Chopin</h3>
+<p class="book-author">by Kate Chopin</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">AD-47</span>
+<h3 class="book-title">The Three Musketeers</h3>
+<p class="book-author">by Alexandre Dumas</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">TJ-48</span>
+<h3 class="book-title">The current</h3>
+<p class="book-author">by Tim Johnston</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Unread">
+<span class="book-id">CF-49</span>
+<h3 class="book-title">Meet me at the lake</h3>
+<p class="book-author">by Carley Fortune</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Unread">
+<span class="book-id">TM-50</span>
+<h3 class="book-title">Whichwood</h3>
+<p class="book-author">by Tahereh Mafi</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Unread">
+<span class="book-id">SM-51</span>
+<h3 class="book-title">Itch</h3>
+<p class="book-author">by Simon Mayo</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Family / Friendly" data-status="Unread">
+<span class="book-id">JN-52</span>
+<h3 class="book-title">Holding up the universe</h3>
+<p class="book-author">by Jennifer Niven</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Family / Friendly</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Unread">
+<span class="book-id">KS-53</span>
+<h3 class="book-title">Phantasma</h3>
+<p class="book-author">by Kaylie Smith</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">GF-54</span>
+<h3 class="book-title">Gone Girl</h3>
+<p class="book-author">by Gillian Flynn</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">NN-55</span>
+<h3 class="book-title">The last graduate</h3>
+<p class="book-author">by Naomi Novik</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Family / Friendly" data-status="Unread">
+<span class="book-id">CB-56</span>
+<h3 class="book-title">Frances and Bernard</h3>
+<p class="book-author">by Carlene Bauer</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Family / Friendly</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">JK-57</span>
+<h3 class="book-title">Night of the dragon</h3>
+<p class="book-author">by Julie Kagawa</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">DB-58</span>
+<h3 class="book-title">Dream town</h3>
+<p class="book-author">by David Baldacci</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Self-help" data-status="Currently reading">
+<span class="book-id">SK-59</span>
+<h3 class="book-title">The art of impossible</h3>
+<p class="book-author">by Steven Kotler</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Self-help</span>
+<span class="tag status reading">Currently Reading</span>
+</div>
+</div>
+<div class="book-card" data-genre="Family / Friendly" data-status="Unread">
+<span class="book-id">JF-60</span>
+<h3 class="book-title">Something red</h3>
+<p class="book-author">by Jennifer Gilmore</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Family / Friendly</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Family / Friendly" data-status="Unread">
+<span class="book-id">CC-61</span>
+<h3 class="book-title">Little bee</h3>
+<p class="book-author">by Chris Cleave</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Family / Friendly</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">RH-62</span>
+<h3 class="book-title">She fiits inside these words</h3>
+<p class="book-author">by R.S. Sin</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">AT-63</span>
+<h3 class="book-title">The dark between</h3>
+<p class="book-author">by Atticus</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">ED-64</span>
+<h3 class="book-title">The poetry of Emily Dicksino</h3>
+<p class="book-author">by Emily Dickinson</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">HO-65</span>
+<h3 class="book-title">Sister Luna</h3>
+<p class="book-author">by Hoon Oh</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">CP-66</span>
+<h3 class="book-title">Pillow thoughts</h3>
+<p class="book-author">by Courtney Peppernell</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">RK-67</span>
+<h3 class="book-title">The sun and her flowers</h3>
+<p class="book-author">by Rupi Kaur</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">RK-68</span>
+<h3 class="book-title">Milk and Honey</h3>
+<p class="book-author">by Rupi Kaur</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">GO-69</span>
+<h3 class="book-title">1984</h3>
+<p class="book-author">by George Orwell</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Unread">
+<span class="book-id">PD-70</span>
+<h3 class="book-title">Credence</h3>
+<p class="book-author">by Penelope Douglas</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Read">
+<span class="book-id">SS-71</span>
+<h3 class="book-title">A Destined Journey</h3>
+<p class="book-author">by Sara Shafiei</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">SK-72</span>
+<h3 class="book-title">born to love, Cursed to feel</h3>
+<p class="book-author">by R.H. Sin</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Currently reading">
+<span class="book-id">NA-73</span>
+<h3 class="book-title">Caught up</h3>
+<p class="book-author">by Navessa Allen</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status reading">Currently Reading</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">AC-74</span>
+<h3 class="book-title">Stuff I've been feeling lately</h3>
+<p class="book-author">by Alicia Cook</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">RY-75</span>
+<h3 class="book-title">Onyx Storm</h3>
+<p class="book-author">by Rebecca Yarros</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">RY-76</span>
+<h3 class="book-title">Iron Flame</h3>
+<p class="book-author">by Rebecca Yarros</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Poetry" data-status="Read">
+<span class="book-id">A-77</span>
+<h3 class="book-title">Love her wild</h3>
+<p class="book-author">by Atticus</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Poetry</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">LR-78</span>
+<h3 class="book-title">Powerless</h3>
+<p class="book-author">by Lauren Roberts</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">GC-79</span>
+<h3 class="book-title">The Canterbury Tales</h3>
+<p class="book-author">by Geoffrey Chaucer</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Read">
+<span class="book-id">SD-80</span>
+<h3 class="book-title">The faraway inn</h3>
+<p class="book-author">by Sara Beth Durst</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">SD-81</span>
+<h3 class="book-title">The Spellshop</h3>
+<p class="book-author">by Sara Beth Durst</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">JB-82</span>
+<h3 class="book-title">The Hawthorne Legacy</h3>
+<p class="book-author">by Jennifer Lynn Barnes</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">JB-83</span>
+<h3 class="book-title">The Grandest Game</h3>
+<p class="book-author">by Jennifer Lynn Barnes</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Unread">
+<span class="book-id">JB-84</span>
+<h3 class="book-title">The Final Gambit</h3>
+<p class="book-author">by Jennifer Lynn Barnes</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">HB-85</span>
+<h3 class="book-title">The Queen of nothing</h3>
+<p class="book-author">by Holly Black</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Read">
+<span class="book-id">HJ-86</span>
+<h3 class="book-title">The reapperance of Rachel Price</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status read">Read</span>
+</div>
+</div>
+<div class="book-card" data-genre="Mystery / Thriller" data-status="Currently reading">
+<span class="book-id">HJ-87</span>
+<h3 class="book-title">Not quite dead yet</h3>
+<p class="book-author">by Holly Jackson</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Mystery / Thriller</span>
+<span class="tag status reading">Currently Reading</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">RY-88</span>
+<h3 class="book-title">Ironflame</h3>
+<p class="book-author">by Rebecca Yarros</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Unread">
+<span class="book-id">TM-89</span>
+<h3 class="book-title">Whichwood</h3>
+<p class="book-author">by Tahereh Mafi</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dystopian" data-status="Unread">
+<span class="book-id">TM-90</span>
+<h3 class="book-title">Watch me</h3>
+<p class="book-author">by Tahereh Mafi</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Dystopian</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Fantasy" data-status="Unread">
+<span class="book-id">AA-91</span>
+<h3 class="book-title">Lightlark</h3>
+<p class="book-author">by Alex Aster</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Fantasy</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Romance" data-status="Unread">
+<span class="book-id">DT-92</span>
+<h3 class="book-title">You've found Oliver</h3>
+<p class="book-author">by Dustin Thao</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Unread">
+<span class="book-id">EK-93</span>
+<h3 class="book-title">The Score</h3>
+<p class="book-author">by Elle kennedy</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Currently reading">
+<span class="book-id">EK-94</span>
+<h3 class="book-title">The mistake</h3>
+<p class="book-author">by Elle Kennedy</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status reading">Currently Reading</span>
+</div>
+</div>
+<div class="book-card" data-genre="Dark Romance" data-status="Unread">
+<span class="book-id">RR-95</span>
+<h3 class="book-title">Heated Rivalry</h3>
+<p class="book-author">by Rachel Reid</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Dark Romance</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">DA-96</span>
+<h3 class="book-title">Inferno</h3>
+<p class="book-author">by Dante Alighieri</p>
+<p class="book-price">$7.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">HP.-97</span>
+<h3 class="book-title">Classic tales of horror</h3>
+<p class="book-author">by H.P Lovecraft</p>
+<p class="book-price">$7.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">OW-98</span>
+<h3 class="book-title">The picture of Dorian Gray</h3>
+<p class="book-author">by Oscar Wilde</p>
+<p class="book-price">$8.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">AP-99</span>
+<h3 class="book-title">Weekends with you</h3>
+<p class="book-author">by Alexandra Paige</p>
+<p class="book-price">$8.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">PC-100</span>
+<h3 class="book-title">The alchemist</h3>
+<p class="book-author">by Paulo Cohellho</p>
+<p class="book-price">$4.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">BS-101</span>
+<h3 class="book-title">Flight of love</h3>
+<p class="book-author">by Benhard Shlink</p>
+<p class="book-price">$5.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">JO-102</span>
+<h3 class="book-title">Carthage</h3>
+<p class="book-author">by Joyce Carol Oates</p>
+<p class="book-price">$5.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">JP-103</span>
+<h3 class="book-title">Cassandra &amp; Jane</h3>
+<p class="book-author">by Jill Pitkeathley</p>
+<p class="book-price">$6.49</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+<div class="book-card" data-genre="Classique" data-status="Unread">
+<span class="book-id">JD-104</span>
+<h3 class="book-title">The Catcher in the Rye</h3>
+<p class="book-author">by J.D Salinger</p>
+<p class="book-price">$6.99</p><div class="book-meta">
+<span class="tag genre">Classique</span>
+<span class="tag status unread">Unread</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+      function filterBooks() {
+        const searchVal = document.getElementById('searchInput').value.toLowerCase();
+        const genreVal = document.getElementById('genreFilter').value;
+        const statusVal = document.getElementById('statusFilter').value;
+        const books = document.querySelectorAll('.book-card');
+
+        books.forEach(book => {
+          const titleText = book.querySelector('.book-title').textContent.toLowerCase();
+          const authorText = book.querySelector('.book-author').textContent.toLowerCase();
+          const bookGenre = book.getAttribute('data-genre');
+          const bookStatus = book.getAttribute('data-status');
+
+          const matchesSearch = titleText.includes(searchVal) || authorText.includes(searchVal);
+          const matchesGenre = genreVal === 'all' || bookGenre === genreVal;
+          const matchesStatus = statusVal === 'all' || bookStatus.toLowerCase() === statusVal.toLowerCase();
+
+          if (matchesSearch && matchesGenre && matchesStatus) {
+            book.style.display = 'flex';
+          } else {
+            book.style.display = 'none';
+          }
+        });
+      }
+    </script>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-column">
+<h3>The Witches Games</h3>
+<p>Dark fantasy storytelling through novels, music, games, and immersive worlds.</p>
+</div>
+<div class="footer-column">
+<h3>Explore</h3>
+<ul>
+<li><a href="twg.html">Home</a></li>
+<li><a href="books.html">Books</a></li>
+<li><a href="music.html">Music</a></li>
+<li><a href="information.html">Information</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Follow</h3>
+<div class="logos">
+<a href="https://www.instagram.com/thewitchesgames_/" target="_blank">
+<img alt="instagram" src="img/download2.png"/>
+</a>
+<a href="https://www.tiktok.com/@thewitchesgames_" target="_blank">
+<img alt="tiktok" src="img/download3.png"/>
+</a>
+<a href="https://www.youtube.com/@thewitchesgames" target="_blank">
+<img alt="youtube" src="img/download1.png"/>
+</a>
+</div>
+</div>
+<div class="footer-column">
+<h3>Join the Coven</h3>
+<p>Receive whispers, updates, and exclusive releases from the studio.</p>
+<a class="footer-link" href="twg.html">Visit the home page</a>
+</div>
+</div>
+<h6>© The Witches Games LLC 2026 | All Rights Reserved ©</h6>
+</footer>
+</body>
+</html>
