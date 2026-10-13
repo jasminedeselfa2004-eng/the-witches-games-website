@@ -1,0 +1,484 @@
+
+/* =====================================
+   THE WITCHES GAMES — SILVER LOGIN
+   ===================================== */
+
+:root {
+  --black: #050506;
+  --panel: rgba(9, 9, 11, 0.96);
+  --silver: #d8dbe0;
+  --silver-light: #f4f5f7;
+  --silver-dark: #858b95;
+  --silver-muted: #a8adb6;
+  --border: rgba(200, 205, 215, 0.65);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--black);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--silver);
+  font-family: "Cormorant Garamond", serif;
+  background:
+    radial-gradient(
+      ellipse at 50% 30%,
+      rgba(100, 105, 118, 0.15),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #080809, #020203);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Main page */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 42px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background moonlight */
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 185, 195, 0.09),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Brand */
+
+.brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--silver-light);
+}
+
+.moon {
+  font-size: 42px;
+  line-height: 1;
+  color: var(--silver);
+}
+
+.brand-small {
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 8px;
+  margin: 10px 0 3px 8px;
+}
+
+.brand-name {
+  font-family: "Cinzel", serif;
+  font-size: clamp(31px, 7vw, 43px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -1px;
+  text-shadow: 0 0 24px rgba(220, 225, 235, 0.15);
+}
+
+.star {
+  margin-top: 12px;
+  font-size: 24px;
+  color: var(--silver);
+}
+
+/* Decorative line */
+
+.ornament {
+  width: min(100%, 440px);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 22px;
+  color: var(--silver);
+  font-size: 19px;
+}
+
+.ornament span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--silver-dark)
+  );
+}
+
+.ornament span:last-child {
+  transform: rotate(180deg);
+}
+
+/* Login panel */
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  padding: 42px 34px 38px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow:
+    0 0 0 5px rgba(190, 195, 205, 0.025),
+    0 20px 70px rgba(0, 0, 0, 0.7),
+    inset 0 0 30px rgba(180, 185, 195, 0.025);
+}
+
+.login-card::before,
+.login-card::after {
+  content: "✧";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--silver);
+  background: var(--black);
+  padding: 0 12px;
+  font-size: 23px;
+}
+
+.login-card::before {
+  top: -15px;
+}
+
+.login-card::after {
+  bottom: -15px;
+}
+
+.card-star {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 18px;
+  color: var(--silver);
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  color: var(--silver-light);
+}
+
+.subtitle {
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--silver-muted);
+  margin: 10px 0 34px;
+}
+
+/* Inputs */
+
+#loginForm {
+  width: 100%;
+}
+
+.input-field {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 14px;
+  border: 1px solid var(--silver-dark);
+  background: rgba(255, 255, 255, 0.015);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus-within {
+  border-color: var(--silver-light);
+  box-shadow: 0 0 12px rgba(220, 225, 235, 0.08);
+}
+
+.field-icon {
+  font-size: 23px;
+  color: var(--silver);
+  flex-shrink: 0;
+}
+
+.input-field input {
+  min-width: 0;
+  width: 100%;
+  height: 52px;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: var(--silver-light);
+  background: transparent;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+}
+
+.input-field input::placeholder {
+  color: #a5a8af;
+  opacity: 1;
+}
+
+.show-password {
+  min-width: 38px;
+  min-height: 44px;
+  border: none;
+  background: transparent;
+  color: var(--silver);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Remember me and recovery */
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 28px;
+  font-size: 15px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--silver);
+}
+
+.form-options a {
+  color: var(--silver-muted);
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+}
+
+.form-options a:hover,
+.register-link:hover {
+  text-decoration-color: var(--silver);
+}
+
+/* Silver login button */
+
+.login-button {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid var(--silver-light);
+  color: #101114;
+  background: linear-gradient(
+    135deg,
+    #f0f1f3,
+    #aeb3bc 45%,
+    #e3e5e9
+  );
+  font-family: "Cinzel", serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.login-button:hover {
+  filter: brightness(1.12);
+}
+
+.login-button:active {
+  transform: scale(0.99);
+}
+
+.login-message {
+  color: var(--silver);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Account registration */
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0 18px;
+  color: var(--silver);
+}
+
+.divider span {
+  width: 70px;
+  height: 1px;
+  background: var(--silver-dark);
+}
+
+.register-text {
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--silver-muted);
+  margin: 0 0 14px;
+}
+
+.register-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  color: var(--silver-light);
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--silver-dark);
+  text-underline-offset: 6px;
+}
+
+/* Footer links */
+
+.back-home {
+  margin-top: 32px;
+  font-family: "Cinzel", serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: var(--silver-muted);
+}
+
+.back-home:hover {
+  color: var(--silver-light);
+}
+
+footer {
+  margin-top: 28px;
+  font-family: "Cinzel", serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #777c85;
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--silver-light);
+  outline-offset: 4px;
+}
+
+/* iPhone and mobile screens */
+
+@media (max-width: 600px) {
+  .login-page {
+    justify-content: flex-start;
+    padding: 34px 18px 28px;
+  }
+
+  .brand {
+    margin-bottom: 18px;
+  }
+
+  .moon {
+    font-size: 36px;
+  }
+
+  .login-card {
+    padding: 34px 20px 32px;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }
+
+  .form-options {
+    font-size: 14px;
+  }
+
+  .input-field {
+    min-height: 54px;
+  }
+}
+
+/* Narrow iPhone screens */
+
+@media (max-width: 360px) {
+  .login-page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .login-card {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .form-options {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
