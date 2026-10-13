@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Create Account | The Witches Games</title>
+
+  <link rel="stylesheet" href="register.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="register-page">
+
+    <a class="brand" href="index.html" aria-label="The Witches Games home">
+      <span class="moon">☾</span>
+      <span class="brand-small">THE</span>
+      <span class="brand-name">WITCHES<br>GAMES</span>
+      <span class="star">✦</span>
+    </a>
+
+    <div class="ornament">
+      <span></span> ✧ <span></span>
+    </div>
+
+    <section class="register-card">
+
+      <div class="card-star">✧</div>
+
+      <h1>JOIN THE COVEN</h1>
+      <p class="subtitle">YOUR STORY BEGINS HERE</p>
+
+      <form id="registerForm">
+
+        <label class="input-field">
+          <span class="field-icon">♙</span>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            aria-label="Username"
+            autocomplete="username"
+            minlength="3"
+            maxlength="30"
+            required
+          >
+        </label>
+
+        <label class="input-field">
+          <span class="field-icon">✉</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            aria-label="Email address"
+            autocomplete="email"
+            required
+          >
+        </label>
+
+        <label class="input-field">
+          <span class="field-icon">♙</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create Password"
+            aria-label="Create password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+          <button
+            type="button"
+            class="show-password"
+            id="togglePassword"
+            aria-label="Show password"
+            aria-pressed="false"
+          >◉</button>
+        </label>
+
+        <label class="input-field">
+          <span class="field-icon">♙</span>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            aria-label="Confirm password"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          >
+        </label>
+
+        <label class="terms">
+          <input type="checkbox" id="terms" required>
+          <span>
+            I agree to the
+            <a href="terms.html">Terms of Service</a>
+            and
+            <a href="privacy.html">Privacy Policy</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="register-button">
+          CREATE ACCOUNT
+        </button>
+
+        <p id="registerMessage" class="register-message" role="status" aria-live="polite"></p>
+
+      </form>
+
+      <div class="divider">
+        <span></span> ✦ <span></span>
+      </div>
+
+      <p class="login-text">ALREADY A MEMBER?</p>
+
+      <a href="login.html" class="login-link">
+        RETURN TO LOGIN
+      </a>
+
+    </section>
+
+    <a href="index.html" class="back-home">
+      ← RETURN TO THE REALM
+    </a>
+
+    <footer>
+      © THE WITCHES GAMES 2026
+    </footer>
+
+  </main>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const toggle = document.getElementById("togglePassword");
+    const message = document.getElementById("registerMessage");
+
+    toggle.addEventListener("click", () => {
+      const isHidden = password.type === "password";
+
+      password.type = isHidden ? "text" : "password";
+      confirmPassword.type = isHidden ? "text" : "password";
+
+      toggle.setAttribute("aria-pressed", String(isHidden));
+      toggle.setAttribute(
+        "aria-label",
+        isHidden ? "Hide passwords" : "Show passwords"
+      );
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (password.value !== confirmPassword.value) {
+        message.textContent = "Your passwords do not match.";
+        confirmPassword.focus();
+        return;
+      }
+
+      message.textContent =
+        "Your form is valid! Connect an authentication service to create your account.";
+    });
+
+    confirmPassword.addEventListener("input", () => {
+      if (confirmPassword.value !== password.value) {
+        confirmPassword.setCustomValidity("Passwords do not match.");
+      } else {
+        confirmPassword.setCustomValidity("");
+      }
+    });
+
+    password.addEventListener("input", () => {
+      confirmPassword.setCustomValidity(
+        confirmPassword.value && confirmPassword.value !== password.value
+          ? "Passwords do not match."
+          : ""
+      );
+    });
+  </script>
+
+</body>
+</html>
