@@ -165,14 +165,19 @@
 
         if (error) throw error;
 
-        if (data.session) {
-          message.textContent =
-            "Your account is ready! You can now sign in.";
-        } else {
-          message.textContent =
-            "Account created! Check your email and click the verification link before logging in.";
-        }
+if (data.session) {
+  window.location.href = "index.html";
+} else {
+  message.textContent =
+    "Account created! Please verify your email. Redirecting to the home page...";
 
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 3000);
+}
+
+form.reset();
+confirmPassword.setCustomValidity("");
         form.reset();
         confirmPassword.setCustomValidity("");
 
