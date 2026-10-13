@@ -3,10 +3,11 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="user-scalable=no, width=device-width,">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <title>The Witches Games - Home</title>
+<meta http-equiv="refresh" content="0; url=login.html">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -74,20 +75,14 @@
 <!-- ================= MAIN ================= -->
 <main>
 
-
-</div>
-
-    
- <div class="story">
-    <span class="section-number"></span>
-     <img src="img/welcome.jpg" alt="The Witches Games" class="front">
-     </div>
+  <section class="story">
+    <img src="img/welcome.jpg" alt="Welcome to The Witches Games" class="front">
+  </section>
 
   <div class="divider"></div>
 
   <section class="story">
-    <span class="section-number"></span>
-     <img src="img/curse.jpg" alt="The Witches Games" class="front">
+    <img src="img/curse.jpg" alt="Discover the mysteries of The Witches Games" class="front">
   </section>
 
   <div class="divider"></div>
@@ -97,10 +92,18 @@
     <p>Receive whispers from The Witches Games — updates, secrets, and forbidden releases.</p>
 
     <form class="email-form">
-      <input type="email" placeholder="Enter your email..." required>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email..."
+        aria-label="Your email address"
+        autocomplete="email"
+        required
+      >
       <button type="submit">Subscribe</button>
     </form>
   </section>
+
 </main>
 
 <!-- ================= FOOTER ================= -->
