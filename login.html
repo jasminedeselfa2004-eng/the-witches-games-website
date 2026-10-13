@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | The Witches Games</title>
+
+  <link rel="stylesheet" href="login.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="login-page">
+    
+<a href="login.html">Member Login</a>
+    <a class="brand" href="index.html" aria-label="The Witches Games home">
+      <span class="moon">☾</span>
+      <span class="brand-small">THE</span>
+      <span class="brand-name">WITCHES<br>GAMES</span>
+      <span class="star">✦</span>
+    </a>
+
+    <div class="ornament">
+      <span></span> ✧ <span></span>
+    </div>
+
+    <section class="login-card">
+
+      <div class="card-star">✧</div>
+
+      <h1>WELCOME BACK</h1>
+      <p class="subtitle">THE COVEN IS WAITING</p>
+
+      <form id="loginForm">
+
+        <label class="input-field">
+          <span class="field-icon">♙</span>
+          <input
+            type="text"
+            name="email"
+            placeholder="Username or Email"
+            aria-label="Username or email"
+            autocomplete="username"
+            required
+          >
+        </label>
+
+        <label class="input-field">
+          <span class="field-icon">♙</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            aria-label="Password"
+            autocomplete="current-password"
+            required
+          >
+          <button
+            type="button"
+            class="show-password"
+            id="togglePassword"
+            aria-label="Show password"
+            aria-pressed="false"
+          >◉</button>
+        </label>
+
+        <div class="form-options">
+          <label class="remember">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-button">
+          LOGIN
+        </button>
+
+        <p id="loginMessage" class="login-message" role="status"></p>
+
+      </form>
+
+      <div class="divider">
+        <span></span> ✦ <span></span>
+      </div>
+
+      <p class="register-text">NEW TO THE WITCHES GAMES?</p>
+
+      <a href="register.html" class="register-link">
+        CREATE AN ACCOUNT
+      </a>
+
+    </section>
+
+    <a href="index.html" class="back-home">
+      ← RETURN TO THE REALM
+    </a>
+
+    <footer>
+      © THE WITCHES GAMES 2026
+    </footer>
+
+  </main>
+
+  <script>
+    const password = document.getElementById("password");
+    const toggle = document.getElementById("togglePassword");
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("loginMessage");
+
+    toggle.addEventListener("click", () => {
+      const isHidden = password.type === "password";
+
+      password.type = isHidden ? "text" : "password";
+      toggle.setAttribute("aria-pressed", String(isHidden));
+      toggle.setAttribute(
+        "aria-label",
+        isHidden ? "Hide password" : "Show password"
+      );
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      message.textContent =
+        "The login design is ready, but authentication must be connected.";
+
+    });
+  </script>
+
+</body>
+</html>
