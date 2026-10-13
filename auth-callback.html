@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification | The Witches Games</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <div class="card-star">✧</div>
+      <h1>THE VEIL IS LIFTED</h1>
+      <p class="subtitle" id="verificationMessage" role="status">
+        Verifying your email...
+      </p>
+      <a href="login.html" class="register-link" id="loginLink"
+         hidden>RETURN TO LOGIN</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+  <script>
+    async function verifyEmail() {
+      const message = document.getElementById("verificationMessage");
+      const loginLink = document.getElementById("loginLink");
+
+      try {
+        // The Supabase client processes the verification redirect.
+        const { data, error } =
+          await window.twgSupabase.auth.getSession();
+
+        if (error) throw error;
+
+        if (data.session?.user?.email_confirmed_at) {
+          message.textContent =
+            "Your email has been verified. Welcome to The Witches Games.";
+        } else {
+          message.textContent =
+            "We couldn't confirm your email automatically. Try the verification link again or request a new one.";
+        }
+
+        loginLink.hidden = false;
+      } catch (error) {
+        message.textContent =
+          "Verification could not be completed. Please try again.";
+        loginLink.hidden = false;
+        console.error("Email verification error:", error);
+      }
+    }
+
+    verifyEmail();
+  </script>
+</body>
+</html>
