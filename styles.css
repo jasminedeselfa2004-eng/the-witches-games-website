@@ -106,13 +106,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: 180px;
     height: auto;
     margin: 0 auto;
 }
 
 .witches-logo img {
-    width: 100px;
+    width: 160px;
     height: auto;
     display: block;
     filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.35));
@@ -156,12 +156,12 @@ body {
     }
 
     .witches-logo {
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: auto;
     }
 
     .witches-logo img {
-        width: 115px;
+        width: 150px;
     }
 }
 
